@@ -29,7 +29,7 @@ class LivreCreate(BaseModel):
                     "auteur": "Jacques Roumain",
                     "annee": 1944,
                     "categorie": "roman",
-                    "isbn": "9782253004509",
+                    "isbn": "1234567890",
                     "disponible": True,
                 }
             ]
