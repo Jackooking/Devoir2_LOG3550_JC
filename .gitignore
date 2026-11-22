@@ -1,0 +1,15 @@
+# Environnement virtuel (recréé avec requirements.txt)
+.venv/
+
+# Fichiers compilés par Python
+__pycache__/
+*.pyc
+
+# Base de données SQLite (jamais dans le dépôt)
+*.db
+
+# Cache de pytest
+.pytest_cache/
+
+# Réglages personnels de l'éditeur
+.vscode/
