@@ -146,7 +146,7 @@ POST ne l'est pas : chaque envoi crée un nouveau livre avec un nouvel `id`.
 
 ## Captures
 
-Les captures sont regroupées dans le document Word `Captures_devoir2_Jackensly.docx`, joint dans l'archive ZIP :
+Les captures sont regroupées dans le document `Captures_devoir2_Jackensly.pdf`, joint dans l'archive ZIP :
 
 1. page `/docs` (Swagger) avec tous les points d'accès
 2. réponse 422 (titre trop court)
