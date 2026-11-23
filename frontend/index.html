@@ -48,7 +48,7 @@
         <option value="annee-desc">Année (décroissant)</option>
       </select>
     </div>
-        <button type="button" id="bouton-reinitialiser">Réinitialiser</button>
+        <p id="message-etat" role="status" aria-live="polite"></p>
         <p id="nombre-resultats" aria-live="polite"></p>
     <p id="message-vide" hidden>Aucun livre ne correspond à votre recherche.</p>
      <div id="liste-livres"></div>
@@ -90,6 +90,7 @@
           <label for="disponible">Disponible</label>
         </div>
 
+        <p id="erreur-api" class="erreur" aria-live="polite"></p>
         <button type="submit">Ajouter</button>
       </form>
     </section>
@@ -99,7 +100,6 @@
     <p>Bibliothèque Numérique JC</p>
   </footer>
 
-  <script src="js/data.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
