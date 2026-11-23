@@ -1,6 +1,6 @@
 # Bibliothèque Numérique JC – LOG3550 Devoir 2 (backend FastAPI)
 
-Dépôt Git : **(à compléter : lien GitHub du dépôt)**
+Dépôt Git : https://github.com/Jackooking/Devoir2_LOG3550_JC
 
 ## Description
 
@@ -29,8 +29,8 @@ requirements.txt       paquets Python (pip freeze)
 Prérequis : Python 3.10 ou plus et Git.
 
 ```powershell
-git clone <lien du dépôt>
-cd devoir2
+git clone https://github.com/Jackooking/Devoir2_LOG3550_JC.git
+cd Devoir2_LOG3550_JC
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
