@@ -13,3 +13,7 @@ __pycache__/
 
 # Réglages personnels de l'éditeur
 .vscode/
+
+# Document Word des captures (joint seulement dans le ZIP)
+*.docx
+~$*

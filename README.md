@@ -20,7 +20,6 @@ app/schemas.py         schémas Pydantic LivreCreate, LivreUpdate, LivreRead et 
 app/routers/livres.py  points d'accès /livres (CRUD, filtres, pagination, erreurs)
 tests/test_livres.py   21 tests pytest sur une base SQLite en mémoire
 frontend/              frontend du devoir 1 relié à l'API
-captures/              captures d'écran numérotées
 requirements.txt       paquets Python (pip freeze)
 ```
 
@@ -146,14 +145,14 @@ POST ne l'est pas : chaque envoi crée un nouveau livre avec un nouvel `id`.
 
 ## Captures
 
-Les captures sont dans le dossier `captures/` :
+Les captures sont regroupées dans le document Word `Captures_Devoir2.docx`, joint dans l'archive ZIP :
 
-1. `01-swagger.png` : page `/docs` avec tous les points d'accès
-2. `02-erreur-422-titre.png` : réponse 422 (titre trop court)
-3. `03-erreur-422-annee.png` : réponse 422 (année hors limites)
-4. `04-pytest.png` : `pytest -v`, tous les tests au vert
-5. `05-catalogue-api.png` : catalogue alimenté par l'API
-6. `06-reseau-post.png` : requête POST dans l'onglet Réseau du navigateur
+1. page `/docs` (Swagger) avec tous les points d'accès
+2. réponse 422 (titre trop court)
+3. réponse 422 (année hors limites)
+4. `pytest -v`, tous les tests au vert
+5. catalogue alimenté par l'API
+6. requête POST dans l'onglet Réseau du navigateur
 
 ## Sources et outils d'assistance
 
