@@ -90,7 +90,6 @@ Règles de validation : titre et auteur de 2 à 200 caractères ; année de 1450
 
 ### 1. Rôle de FastAPI, d'Uvicorn et de Pydantic ; pourquoi séparer modèle et schémas
 
-**(À relire et reformuler avec mes mots.)**
 FastAPI est le framework : il associe chaque URL et méthode HTTP à une fonction Python et génère la documentation `/docs`.
 Uvicorn est le serveur ASGI : il écoute sur le port 8000, reçoit les requêtes HTTP et les transmet à l'application FastAPI.
 Pydantic valide et convertit les données : il vérifie le JSON reçu selon les types et les règles des schémas et renvoie une erreur 422 sinon.
@@ -132,7 +131,6 @@ Les autres erreurs (404, 409) ont un `detail` qui est un simple texte, par exemp
 
 ### 3. PUT ou PATCH ; idempotence
 
-**(À relire et reformuler avec mes mots.)**
 PUT remplace la ressource au complet : on envoie tous les champs, et un champ facultatif omis reprend sa valeur par défaut.
 PATCH modifie seulement les champs envoyés ; les autres ne changent pas.
 Une requête est idempotente si l'envoyer une ou plusieurs fois laisse le serveur dans le même état.
@@ -141,11 +139,14 @@ POST ne l'est pas : chaque envoi crée un nouveau livre avec un nouvel `id`.
 
 ## Difficultés rencontrées
 
-**(À compléter avec mes propres difficultés.)**
+- Pour `requirements.txt` : la commande `pip freeze > requirements.txt` dans PowerShell avait créé le fichier en UTF-16, que certains outils lisent mal. Je l'ai régénéré en UTF-8.
+- Pour l'erreur 409 : quand un PATCH mettait un ISBN déjà utilisé, le message affichait « l'ISBN None ». Après le `rollback`, SQLAlchemy recharge le livre depuis la base, donc `livre.isbn` n'avait plus la valeur envoyée. J'ai gardé l'ISBN dans une variable avant le `commit`.
+- Pour les captures des erreurs 422 : au début, je ne trouvais pas `POST /livres` dans Swagger. Il fallait ouvrir exactement `http://127.0.0.1:8000/docs`, puis cliquer sur la barre verte et sur « Try it out ».
+- Pour la capture de l'onglet Réseau : j'ouvrais d'abord les outils sur la page de l'API au lieu de mon frontend (port 5500). Ensuite, je voyais 200 au lieu de 201, parce que je cliquais sur la requête GET ou OPTIONS (la vérification CORS) au lieu de la requête POST.
 
 ## Captures
 
-Les captures sont regroupées dans le document Word `Captures_Devoir2.docx`, joint dans l'archive ZIP :
+Les captures sont regroupées dans le document Word `Captures_devoir2_Jackensly.docx`, joint dans l'archive ZIP :
 
 1. page `/docs` (Swagger) avec tous les points d'accès
 2. réponse 422 (titre trop court)
